@@ -4,6 +4,8 @@
     :class="[`${bannerActive ? 'bg-robin' : 'bg-ink-300'}`]"
   >
     <span class="flex items-center justify-center flex-wrap text-sm font-medium">
+      <span class="flex items-center justify-center"></span>
+      
       <span class="md:flex items-center">
         <slot></slot>
       </span>
@@ -15,6 +17,13 @@
 const BANNER_ACTIVE_TIME = 2000
 
 export default {
+  data(){
+  
+  return{
+  bannerActive: true
+  }
+  }
+  
   data() {
     return {
       bannerActive: true
